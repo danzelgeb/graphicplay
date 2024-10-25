@@ -11,7 +11,6 @@ function drawGraph() {
     for (let x = -10; x <= 10; x += 0.1) {
         xValues.push(x);
         try {
-            // Verwende eval, um die Funktion zu berechnen
             yValues.push(eval(func.replace(/x/g, x)));
         } catch (e) {
             alert("Ungültige Funktion. Bitte überprüfe die Eingabe.");
@@ -28,5 +27,13 @@ function drawGraph() {
 
     const data = [trace];
 
-    Plotly.newPlot('graph', data);
+    const layout = {
+        paper_bgcolor: 'black', 
+        plot_bgcolor: 'black',  
+        font: {
+            color: 'white' 
+        }
+    };
+
+    Plotly.newPlot('graph', data, layout);
 }
