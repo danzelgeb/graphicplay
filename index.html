@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Display</title>
+    <title>Funktionsgraph Zeichner</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="asstets/css/style.css">
 </head>
 <body>
-    <h1>Mathematic Display for Functions</h1>
-    <div class="form">
-        <form method="post">
-            <p>f(x) = </p>
-            <input type="number" name="x^2+3" id="ffromx">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="box">
-        <!-- IMAGE / Graph -->
-    </div>
-    <div class="textbox">
-        <p>TEXT: Erklärung</p>
-    </div>
+    <h1>Funktionsgraph Zeichner</h1>
+    <label for="function">Gib eine Funktion ein (z.B. x^2 oder x^3):</label>
+    <input type="text" id="function" placeholder="x^2">
+    <button onclick="drawGraph()">Zeichne Graph</button>
+
+    <div id="graph"></div>
+
 </body>
 <footer>
-    <p class="footer">&copy Daniel G. und Titus T.</p>
+    <p>© 2024" by <a href="danzel34.de">Daniel G.</a> und Titus T.</p>
 </footer>
 </html>
